@@ -1,28 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
+    <title>Geocoding Service</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
-    <!-- meta viewport tag needed to make site responsive on mobile devices https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- Using local versions of the scripts is better when you start to finalise a project
-    OR if you are showing a work in an exhibition setting, removing reliance on the internet 
-    & runnning everything locally will make the work more robust if the network is bad.-->
-  
-    <!--  -->
-    <script src="javascript/libs/p5.js"></script>
-    <script src="javascript/libs/p5.sound.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <meta charset="utf-8" />
-
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <script type="module" src="../public/javascript/map.js"></script>
   </head>
   <body>
-    <main>
-      <div id="sketch-container"></div>
-      <div id="text">
-        <h1>Reflection and data</h1>
-      </div>
-    </main>
-     <script src="javascript/sketch.js"></script> 
+    <div id="map"></div>
+
+    <!-- 
+      The `defer` attribute causes the callback to execute after the full HTML
+      document has been parsed. For non-blocking uses, avoiding race conditions,
+      and consistent behavior across browsers, consider loading using Promises
+      with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+      -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+      defer
+    ></script>
   </body>
 </html>
