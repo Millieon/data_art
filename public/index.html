@@ -1,23 +1,23 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>Geocoding Service</title>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
-    <link rel="stylesheet" type="text/css" href="./css/style.css" />
-    <script type="module" src="../public/javascript/map.js"></script>
+    <!-- Using local versions of the scripts is better when you start to finalise a project
+    OR if you are showing a work in an exhibition setting, removing reliance on the internet 
+    & runnning everything locally will make the work more robust if the network is bad.-->
+  
+    <!--  -->
+    <script src="javascript/libs/p5.js"></script>
+    <script src="javascript/libs/p5.sound.min.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta charset="utf-8" />
+
   </head>
   <body>
-    <div id="map"></div>
-
-    <!-- 
-      The `defer` attribute causes the callback to execute after the full HTML
-      document has been parsed. For non-blocking uses, avoiding race conditions,
-      and consistent behavior across browsers, consider loading using Promises
-      with https://www.npmjs.com/package/@googlemaps/js-api-loader.
-      -->
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
-      defer
-    ></script>
+    <main>
+    </main>
+    <script src="javascript/sketch.js"></script>
   </body>
 </html>
